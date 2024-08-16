@@ -21,6 +21,21 @@ namespace CSadv
         {
 
         }
+
+        class SquareCalculator
+        {
+            public int this[int i]
+            {
+                get
+                {
+                    return i;
+                }
+                set
+                {
+                    Console.WriteLine("{i}번째 상품 설정", i);
+                }
+            }
+        }
     }
     internal class Program
     {
@@ -34,7 +49,11 @@ namespace CSadv
             Console.WriteLine(wantedint.Value);
             Console.WriteLine(wantedDouble.Value);
 
-            
+            SquareCalculator sc = new SquareCalculator();
+            Console.WriteLine(sc[10]);
+            Console.WriteLine(sc[11]);
+            Console.WriteLine(sc[40]);
+            sc[3] = 4;
         }
     }
 }
