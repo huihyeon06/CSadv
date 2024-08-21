@@ -22,18 +22,19 @@ namespace CSadv
 
         }
 
-        class SquareCalculator
+      
+    }
+    class SquareCalculator
+    {
+        public int this[int i]
         {
-            public int this[int i]
+            get
             {
-                get
-                {
-                    return i;
-                }
-                set
-                {
-                    Console.WriteLine("{i}번째 상품 설정", i);
-                }
+                return i;
+            }
+            set
+            {
+                Console.WriteLine("{i}번째 상품 설정", i);
             }
         }
     }
@@ -54,6 +55,18 @@ namespace CSadv
             Console.WriteLine(sc[11]);
             Console.WriteLine(sc[40]);
             sc[3] = 4;
+
+            //out 키워드
+            Console.WriteLine("숫자 입력:");
+            int output;
+            bool result = int.TryParse(Console.ReadLine(), out output);
+            if(result)
+            {
+                Console.WriteLine("입력한 숫자:"+output);
+            }else
+            {
+                Console.WriteLine("숫자를 입력해주세요");
+            }
         }
     }
 }
